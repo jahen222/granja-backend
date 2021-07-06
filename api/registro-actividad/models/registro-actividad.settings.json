@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registro_actividads",
+  "info": {
+    "name": "Registro Actividad",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "actividad": {
+      "type": "string",
+      "required": true
+    },
+    "fechainicio": {
+      "type": "datetime"
+    },
+    "fechafin": {
+      "type": "datetime"
+    },
+    "proposito": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "string"
+    },
+    "medida": {
+      "type": "string"
+    },
+    "campo": {
+      "model": "campo"
+    },
+    "registro_actividad": {
+      "model": "registro-actividad"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Proyectado",
+        "Iniciado",
+        "Finalizado"
+      ],
+      "default": "Proyectado",
+      "required": true
+    },
+    "fechainiciocliente": {
+      "type": "datetime"
+    },
+    "fechafincliente": {
+      "type": "datetime"
+    },
+    "observacion": {
+      "type": "string"
+    },
+    "recursos": {
+      "type": "integer"
+    }
+  }
+}

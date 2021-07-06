@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/registro-actividads",
+      "handler": "registro-actividad.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/registro-actividads/count",
+      "handler": "registro-actividad.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/registro-actividads/:id",
+      "handler": "registro-actividad.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/registro-actividads",
+      "handler": "registro-actividad.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/registro-actividads/:id",
+      "handler": "registro-actividad.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/registro-actividads/:id",
+      "handler": "registro-actividad.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

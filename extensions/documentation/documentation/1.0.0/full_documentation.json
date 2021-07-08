@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/30/2021 10:34:43 PM"
+    "x-generation-date": "07/07/2021 11:11:21 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3985,14 +3985,6 @@
               "registro_actividad": {
                 "type": "string"
               },
-              "estado": {
-                "type": "string",
-                "enum": [
-                  "Proyectado",
-                  "Iniciado",
-                  "Finalizado"
-                ]
-              },
               "fechainiciocliente": {
                 "type": "string"
               },
@@ -4005,6 +3997,9 @@
               "recursos": {
                 "type": "integer"
               },
+              "estado": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -4015,15 +4010,6 @@
                 "type": "string"
               }
             }
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado",
-            "enum": [
-              "Proyectado",
-              "Iniciado",
-              "Finalizado"
-            ]
           },
           "fechainiciocliente": {
             "type": "string",
@@ -4038,6 +4024,10 @@
           },
           "recursos": {
             "type": "integer"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -4080,15 +4070,6 @@
           "registro_actividad": {
             "type": "string"
           },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado",
-            "enum": [
-              "Proyectado",
-              "Iniciado",
-              "Finalizado"
-            ]
-          },
           "fechainiciocliente": {
             "type": "string",
             "format": "date-time"
@@ -4102,6 +4083,10 @@
           },
           "recursos": {
             "type": "integer"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",

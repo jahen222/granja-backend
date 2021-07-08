@@ -620,14 +620,6 @@
               "registro_actividad": {
                 "type": "string"
               },
-              "estado": {
-                "type": "string",
-                "enum": [
-                  "Proyectado",
-                  "Iniciado",
-                  "Finalizado"
-                ]
-              },
               "fechainiciocliente": {
                 "type": "string"
               },
@@ -640,6 +632,9 @@
               "recursos": {
                 "type": "integer"
               },
+              "estado": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -650,15 +645,6 @@
                 "type": "string"
               }
             }
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado",
-            "enum": [
-              "Proyectado",
-              "Iniciado",
-              "Finalizado"
-            ]
           },
           "fechainiciocliente": {
             "type": "string",
@@ -673,6 +659,10 @@
           },
           "recursos": {
             "type": "integer"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -715,15 +705,6 @@
           "registro_actividad": {
             "type": "string"
           },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado",
-            "enum": [
-              "Proyectado",
-              "Iniciado",
-              "Finalizado"
-            ]
-          },
           "fechainiciocliente": {
             "type": "string",
             "format": "date-time"
@@ -737,6 +718,10 @@
           },
           "recursos": {
             "type": "integer"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",

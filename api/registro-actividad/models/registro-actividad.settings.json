@@ -40,16 +40,6 @@
     "registro_actividad": {
       "model": "registro-actividad"
     },
-    "estado": {
-      "type": "enumeration",
-      "enum": [
-        "Proyectado",
-        "Iniciado",
-        "Finalizado"
-      ],
-      "default": "Proyectado",
-      "required": true
-    },
     "fechainiciocliente": {
       "type": "datetime"
     },
@@ -61,6 +51,11 @@
     },
     "recursos": {
       "type": "integer"
+    },
+    "estado": {
+      "type": "string",
+      "required": true,
+      "default": "Proyectado"
     }
   }
 }

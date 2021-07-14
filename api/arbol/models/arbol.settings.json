@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "arbols",
+  "info": {
+    "name": "Arboles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "integer",
+      "required": true,
+      "unique": false,
+      "min": 0
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "Manzano",
+        "Nogal",
+        "Roble"
+      ],
+      "required": true
+    },
+    "camellone": {
+      "via": "arboles",
+      "model": "camellones"
+    }
+  }
+}

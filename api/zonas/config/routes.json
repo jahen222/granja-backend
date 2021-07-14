@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zonas",
+      "handler": "zonas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zonas/count",
+      "handler": "zonas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zonas/:id",
+      "handler": "zonas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zonas",
+      "handler": "zonas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zonas/:id",
+      "handler": "zonas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zonas/:id",
+      "handler": "zonas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/07/2021 11:11:21 PM"
+    "x-generation-date": "07/13/2021 4:02:21 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -556,6 +556,1028 @@
         ]
       }
     },
+    "/arbols": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Arbol"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Arbol"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Arbol"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Arbol"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewArbol"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/arbols/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Arbol"
+        ],
+        "parameters": []
+      }
+    },
+    "/arbols/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Arbol"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Arbol"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Arbol"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Arbol"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewArbol"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Arbol"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/camellones": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the camellones's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve camellones document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Camellones"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Camellones"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new camellones record",
+        "responses": {
+          "200": {
+            "description": "Retrieve camellones document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Camellones"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Camellones"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCamellones"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/camellones/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of camellones documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve camellones document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Camellones"
+        ],
+        "parameters": []
+      }
+    },
+    "/camellones/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one camellones record",
+        "responses": {
+          "200": {
+            "description": "Retrieve camellones document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Camellones"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Camellones"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single camellones record",
+        "responses": {
+          "200": {
+            "description": "Retrieve camellones document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Camellones"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Camellones"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCamellones"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single camellones record",
+        "responses": {
+          "200": {
+            "description": "deletes a single camellones based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Camellones"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/campos": {
       "get": {
         "deprecated": false,
@@ -1052,6 +2074,530 @@
         "summary": "",
         "tags": [
           "Campo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/cuidado-arboles": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the cuidado-arboles's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve cuidado-arboles document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cuidado-arboles"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new cuidado-arboles record",
+        "responses": {
+          "200": {
+            "description": "Retrieve cuidado-arboles document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cuidado-arboles"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCuidado-arboles"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cuidado-arboles/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of cuidado-arboles documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve cuidado-arboles document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cuidado-arboles"
+        ],
+        "parameters": []
+      }
+    },
+    "/cuidado-arboles/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one cuidado-arboles record",
+        "responses": {
+          "200": {
+            "description": "Retrieve cuidado-arboles document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cuidado-arboles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single cuidado-arboles record",
+        "responses": {
+          "200": {
+            "description": "Retrieve cuidado-arboles document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cuidado-arboles"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCuidado-arboles"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single cuidado-arboles record",
+        "responses": {
+          "200": {
+            "description": "deletes a single cuidado-arboles based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cuidado-arboles"
         ],
         "parameters": [
           {
@@ -1576,6 +3122,517 @@
         "summary": "",
         "tags": [
           "Registro-actividad"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/zonas": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the zonas's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve zonas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Zonas"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zonas"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new zonas record",
+        "responses": {
+          "200": {
+            "description": "Retrieve zonas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Zonas"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zonas"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewZonas"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/zonas/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of zonas documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve zonas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zonas"
+        ],
+        "parameters": []
+      }
+    },
+    "/zonas/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one zonas record",
+        "responses": {
+          "200": {
+            "description": "Retrieve zonas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Zonas"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zonas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single zonas record",
+        "responses": {
+          "200": {
+            "description": "Retrieve zonas document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Zonas"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zonas"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewZonas"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single zonas record",
+        "responses": {
+          "200": {
+            "description": "deletes a single zonas based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Zonas"
         ],
         "parameters": [
           {
@@ -3854,6 +5911,214 @@
           }
         }
       },
+      "Arbol": {
+        "required": [
+          "id",
+          "numero",
+          "tipo"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero": {
+            "type": "integer"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "Manzano",
+              "Nogal",
+              "Roble"
+            ]
+          },
+          "camellone": {
+            "required": [
+              "id",
+              "numero"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "integer"
+              },
+              "zona": {
+                "type": "string"
+              },
+              "arboles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewArbol": {
+        "required": [
+          "numero",
+          "tipo"
+        ],
+        "properties": {
+          "numero": {
+            "type": "integer"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "Manzano",
+              "Nogal",
+              "Roble"
+            ]
+          },
+          "camellone": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Camellones": {
+        "required": [
+          "id",
+          "numero"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero": {
+            "type": "integer"
+          },
+          "zona": {
+            "required": [
+              "id",
+              "numero"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "integer"
+              },
+              "campo": {
+                "type": "string"
+              },
+              "camellones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "arboles": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "numero",
+                "tipo"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "numero": {
+                  "type": "integer"
+                },
+                "tipo": {
+                  "type": "string",
+                  "enum": [
+                    "Manzano",
+                    "Nogal",
+                    "Roble"
+                  ]
+                },
+                "camellone": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewCamellones": {
+        "required": [
+          "numero"
+        ],
+        "properties": {
+          "numero": {
+            "type": "integer"
+          },
+          "zona": {
+            "type": "string"
+          },
+          "arboles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Campo": {
         "required": [
           "id",
@@ -3865,6 +6130,41 @@
           },
           "nombre": {
             "type": "string"
+          },
+          "zonas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "numero"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "numero": {
+                  "type": "integer"
+                },
+                "campo": {
+                  "type": "string"
+                },
+                "camellones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -3879,6 +6179,104 @@
         "properties": {
           "nombre": {
             "type": "string"
+          },
+          "zonas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Cuidado-arboles": {
+        "required": [
+          "id",
+          "actividad",
+          "estado"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "arbol": {
+            "required": [
+              "id",
+              "numero",
+              "tipo"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "integer"
+              },
+              "tipo": {
+                "type": "string",
+                "enum": [
+                  "Manzano",
+                  "Nogal",
+                  "Roble"
+                ]
+              },
+              "camellone": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "actividad": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Pendiente"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewCuidado-arboles": {
+        "required": [
+          "actividad",
+          "estado"
+        ],
+        "properties": {
+          "arbol": {
+            "type": "string"
+          },
+          "actividad": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Pendiente"
           },
           "published_at": {
             "type": "string",
@@ -3936,6 +6334,12 @@
               },
               "nombre": {
                 "type": "string"
+              },
+              "zonas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -4087,6 +6491,119 @@
           "estado": {
             "type": "string",
             "default": "Proyectado"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Zonas": {
+        "required": [
+          "id",
+          "numero"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero": {
+            "type": "integer",
+            "default": 1
+          },
+          "campo": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "zonas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "camellones": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "numero"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "numero": {
+                  "type": "integer"
+                },
+                "zona": {
+                  "type": "string"
+                },
+                "arboles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewZonas": {
+        "required": [
+          "numero"
+        ],
+        "properties": {
+          "numero": {
+            "type": "integer",
+            "default": 1
+          },
+          "campo": {
+            "type": "string"
+          },
+          "camellones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -4327,6 +6844,12 @@
               "nombre": {
                 "type": "string"
               },
+              "zonas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -4419,7 +6942,16 @@
       "name": "Actividades"
     },
     {
+      "name": "Arbol"
+    },
+    {
+      "name": "Camellones"
+    },
+    {
       "name": "Campo"
+    },
+    {
+      "name": "Zonas"
     },
     {
       "name": "Email - Email"

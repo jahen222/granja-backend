@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/registro-actividads": {
+    "/camellones": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the camellones's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve camellones document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Camellones"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Camellones"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new camellones record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve camellones document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Camellones"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Camellones"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewCamellones"
               }
             }
           }
         }
       }
     },
-    "/registro-actividads/count": {
+    "/camellones/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of camellones documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve camellones document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Camellones"
         ],
         "parameters": []
       }
     },
-    "/registro-actividads/{id}": {
+    "/camellones/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one camellones record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve camellones document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Camellones"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Camellones"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single camellones record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve camellones document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Camellones"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Camellones"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewCamellones"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single camellones record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single camellones based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Camellones"
         ],
         "parameters": [
           {
@@ -527,52 +514,34 @@
   },
   "components": {
     "schemas": {
-      "Registro-actividad": {
+      "Camellones": {
         "required": [
           "id",
-          "actividad",
-          "estado"
+          "numero"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "actividad": {
-            "type": "string"
+          "numero": {
+            "type": "integer"
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
+          "zona": {
             "required": [
               "id",
-              "nombre"
+              "numero"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "nombre": {
+              "numero": {
+                "type": "integer"
+              },
+              "campo": {
                 "type": "string"
               },
-              "zonas": {
+              "camellones": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -589,86 +558,43 @@
               }
             }
           },
-          "registro_actividad": {
-            "required": [
-              "id",
-              "actividad",
-              "estado"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actividad": {
-                "type": "string"
-              },
-              "fechainicio": {
-                "type": "string"
-              },
-              "fechafin": {
-                "type": "string"
-              },
-              "proposito": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "cantidad": {
-                "type": "string"
-              },
-              "medida": {
-                "type": "string"
-              },
-              "campo": {
-                "type": "string"
-              },
-              "registro_actividad": {
-                "type": "string"
-              },
-              "fechainiciocliente": {
-                "type": "string"
-              },
-              "fechafincliente": {
-                "type": "string"
-              },
-              "observacion": {
-                "type": "string"
-              },
-              "recursos": {
-                "type": "integer"
-              },
-              "estado": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "arboles": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "numero",
+                "tipo"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "numero": {
+                  "type": "integer"
+                },
+                "tipo": {
+                  "type": "string",
+                  "enum": [
+                    "Manzano",
+                    "Nogal",
+                    "Roble"
+                  ]
+                },
+                "camellone": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -676,58 +602,22 @@
           }
         }
       },
-      "NewRegistro-actividad": {
+      "NewCamellones": {
         "required": [
-          "actividad",
-          "estado"
+          "numero"
         ],
         "properties": {
-          "actividad": {
-            "type": "string"
-          },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
-            "type": "string"
-          },
-          "registro_actividad": {
-            "type": "string"
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
+          "numero": {
             "type": "integer"
           },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
+          "zona": {
+            "type": "string"
+          },
+          "arboles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -743,5 +633,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Camellones"
+    }
+  ]
 }

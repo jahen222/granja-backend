@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zonas",
+  "info": {
+    "name": "Zonas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "required": true,
+      "unique": false,
+      "min": 0,
+      "default": 1,
+      "type": "integer"
+    },
+    "campo": {
+      "model": "campo",
+      "via": "zonas"
+    },
+    "camellones": {
+      "via": "zona",
+      "collection": "camellones"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuidado_arboles",
+  "info": {
+    "name": "Cuidado Arboles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "arbol": {
+      "model": "arbol"
+    },
+    "actividad": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "string",
+      "required": true,
+      "default": "Pendiente"
+    }
+  }
+}

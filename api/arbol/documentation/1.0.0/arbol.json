@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/registro-actividads": {
+    "/arbols": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Arbol"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Arbol"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Arbol"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Arbol"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewArbol"
               }
             }
           }
         }
       }
     },
-    "/registro-actividads/count": {
+    "/arbols/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Arbol"
         ],
         "parameters": []
       }
     },
-    "/registro-actividads/{id}": {
+    "/arbols/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Arbol"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Arbol"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Arbol"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Arbol"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewArbol"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Arbol"
         ],
         "parameters": [
           {
@@ -527,52 +514,43 @@
   },
   "components": {
     "schemas": {
-      "Registro-actividad": {
+      "Arbol": {
         "required": [
           "id",
-          "actividad",
-          "estado"
+          "numero",
+          "tipo"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "actividad": {
-            "type": "string"
-          },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
+          "numero": {
+            "type": "integer"
           },
           "tipo": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "Manzano",
+              "Nogal",
+              "Roble"
+            ]
           },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
+          "camellone": {
             "required": [
               "id",
-              "nombre"
+              "numero"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "nombre": {
+              "numero": {
+                "type": "integer"
+              },
+              "zona": {
                 "type": "string"
               },
-              "zonas": {
+              "arboles": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -589,145 +567,31 @@
               }
             }
           },
-          "registro_actividad": {
-            "required": [
-              "id",
-              "actividad",
-              "estado"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actividad": {
-                "type": "string"
-              },
-              "fechainicio": {
-                "type": "string"
-              },
-              "fechafin": {
-                "type": "string"
-              },
-              "proposito": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "cantidad": {
-                "type": "string"
-              },
-              "medida": {
-                "type": "string"
-              },
-              "campo": {
-                "type": "string"
-              },
-              "registro_actividad": {
-                "type": "string"
-              },
-              "fechainiciocliente": {
-                "type": "string"
-              },
-              "fechafincliente": {
-                "type": "string"
-              },
-              "observacion": {
-                "type": "string"
-              },
-              "recursos": {
-                "type": "integer"
-              },
-              "estado": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewRegistro-actividad": {
+      "NewArbol": {
         "required": [
-          "actividad",
-          "estado"
+          "numero",
+          "tipo"
         ],
         "properties": {
-          "actividad": {
-            "type": "string"
-          },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
-            "type": "string"
-          },
-          "registro_actividad": {
-            "type": "string"
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
+          "numero": {
             "type": "integer"
           },
-          "estado": {
+          "tipo": {
             "type": "string",
-            "default": "Proyectado"
+            "enum": [
+              "Manzano",
+              "Nogal",
+              "Roble"
+            ]
+          },
+          "camellone": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -743,5 +607,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Arbol"
+    }
+  ]
 }

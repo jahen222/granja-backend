@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/camellones",
+      "handler": "camellones.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/camellones/count",
+      "handler": "camellones.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/camellones/:id",
+      "handler": "camellones.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/camellones",
+      "handler": "camellones.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/camellones/:id",
+      "handler": "camellones.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/camellones/:id",
+      "handler": "camellones.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

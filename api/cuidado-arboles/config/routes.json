@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cuidado-arboles",
+      "handler": "cuidado-arboles.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cuidado-arboles/count",
+      "handler": "cuidado-arboles.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cuidado-arboles/:id",
+      "handler": "cuidado-arboles.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cuidado-arboles",
+      "handler": "cuidado-arboles.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cuidado-arboles/:id",
+      "handler": "cuidado-arboles.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cuidado-arboles/:id",
+      "handler": "cuidado-arboles.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

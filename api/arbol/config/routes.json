@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/arbols",
+      "handler": "arbol.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/arbols/count",
+      "handler": "arbol.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/arbols/:id",
+      "handler": "arbol.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/arbols",
+      "handler": "arbol.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/arbols/:id",
+      "handler": "arbol.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/arbols/:id",
+      "handler": "arbol.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

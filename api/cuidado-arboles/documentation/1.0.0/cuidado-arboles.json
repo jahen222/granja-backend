@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/registro-actividads": {
+    "/cuidado-arboles": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the cuidado-arboles's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cuidado-arboles document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Cuidado-arboles"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new cuidado-arboles record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cuidado-arboles document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Cuidado-arboles"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewCuidado-arboles"
               }
             }
           }
         }
       }
     },
-    "/registro-actividads/count": {
+    "/cuidado-arboles/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of cuidado-arboles documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cuidado-arboles document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Cuidado-arboles"
         ],
         "parameters": []
       }
     },
-    "/registro-actividads/{id}": {
+    "/cuidado-arboles/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one cuidado-arboles record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cuidado-arboles document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Cuidado-arboles"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single cuidado-arboles record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cuidado-arboles document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Cuidado-arboles"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewCuidado-arboles"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single cuidado-arboles record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single cuidado-arboles based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Cuidado-arboles"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Registro-actividad": {
+      "Cuidado-arboles": {
         "required": [
           "id",
           "actividad",
@@ -537,138 +537,50 @@
           "id": {
             "type": "string"
           },
+          "arbol": {
+            "required": [
+              "id",
+              "numero",
+              "tipo"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "integer"
+              },
+              "tipo": {
+                "type": "string",
+                "enum": [
+                  "Manzano",
+                  "Nogal",
+                  "Roble"
+                ]
+              },
+              "camellone": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "actividad": {
             "type": "string"
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
+          "descripcion": {
             "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
-            "required": [
-              "id",
-              "nombre"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "zonas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "registro_actividad": {
-            "required": [
-              "id",
-              "actividad",
-              "estado"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actividad": {
-                "type": "string"
-              },
-              "fechainicio": {
-                "type": "string"
-              },
-              "fechafin": {
-                "type": "string"
-              },
-              "proposito": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "cantidad": {
-                "type": "string"
-              },
-              "medida": {
-                "type": "string"
-              },
-              "campo": {
-                "type": "string"
-              },
-              "registro_actividad": {
-                "type": "string"
-              },
-              "fechainiciocliente": {
-                "type": "string"
-              },
-              "fechafincliente": {
-                "type": "string"
-              },
-              "observacion": {
-                "type": "string"
-              },
-              "recursos": {
-                "type": "integer"
-              },
-              "estado": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
           },
           "estado": {
             "type": "string",
-            "default": "Proyectado"
+            "default": "Pendiente"
           },
           "published_at": {
             "type": "string",
@@ -676,58 +588,24 @@
           }
         }
       },
-      "NewRegistro-actividad": {
+      "NewCuidado-arboles": {
         "required": [
           "actividad",
           "estado"
         ],
         "properties": {
+          "arbol": {
+            "type": "string"
+          },
           "actividad": {
             "type": "string"
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
+          "descripcion": {
             "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
-            "type": "string"
-          },
-          "registro_actividad": {
-            "type": "string"
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
           },
           "estado": {
             "type": "string",
-            "default": "Proyectado"
+            "default": "Pendiente"
           },
           "published_at": {
             "type": "string",

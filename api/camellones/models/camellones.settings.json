@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "camellones",
+  "info": {
+    "name": "Camellones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "integer",
+      "required": true,
+      "unique": false,
+      "min": 0
+    },
+    "zona": {
+      "via": "camellones",
+      "model": "zonas"
+    },
+    "arboles": {
+      "via": "camellone",
+      "collection": "arbol"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forma_pagos",
+  "info": {
+    "name": "Forma Pagos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

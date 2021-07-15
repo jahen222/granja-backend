@@ -561,6 +561,64 @@
               }
             }
           },
+          "ventas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "precio",
+                "valorkilo",
+                "total",
+                "factura",
+                "calidad",
+                "cantidad"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "producto": {
+                  "type": "string"
+                },
+                "precio": {
+                  "type": "number"
+                },
+                "valorkilo": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "factura": {
+                  "type": "string"
+                },
+                "forma_pago": {
+                  "type": "string"
+                },
+                "cheque": {
+                  "type": "string"
+                },
+                "campo": {
+                  "type": "string"
+                },
+                "calidad": {
+                  "type": "string"
+                },
+                "cantidad": {
+                  "type": "integer"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -576,6 +634,12 @@
             "type": "string"
           },
           "zonas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ventas": {
             "type": "array",
             "items": {
               "type": "string"

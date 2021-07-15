@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/registro-actividads": {
+    "/forma-pagos": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the forma-pagos's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve forma-pagos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Forma-pagos"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new forma-pagos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve forma-pagos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Forma-pagos"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewForma-pagos"
               }
             }
           }
         }
       }
     },
-    "/registro-actividads/count": {
+    "/forma-pagos/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of forma-pagos documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve forma-pagos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Forma-pagos"
         ],
         "parameters": []
       }
     },
-    "/registro-actividads/{id}": {
+    "/forma-pagos/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one forma-pagos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve forma-pagos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Forma-pagos"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single forma-pagos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve forma-pagos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Forma-pagos"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewForma-pagos"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single forma-pagos record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single forma-pagos based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Forma-pagos"
         ],
         "parameters": [
           {
@@ -527,154 +527,17 @@
   },
   "components": {
     "schemas": {
-      "Registro-actividad": {
+      "Forma-pagos": {
         "required": [
           "id",
-          "actividad",
-          "estado"
+          "nombre"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "actividad": {
+          "nombre": {
             "type": "string"
-          },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
-            "required": [
-              "id",
-              "nombre"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "zonas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "ventas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "registro_actividad": {
-            "required": [
-              "id",
-              "actividad",
-              "estado"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actividad": {
-                "type": "string"
-              },
-              "fechainicio": {
-                "type": "string"
-              },
-              "fechafin": {
-                "type": "string"
-              },
-              "proposito": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "cantidad": {
-                "type": "string"
-              },
-              "medida": {
-                "type": "string"
-              },
-              "campo": {
-                "type": "string"
-              },
-              "registro_actividad": {
-                "type": "string"
-              },
-              "fechainiciocliente": {
-                "type": "string"
-              },
-              "fechafincliente": {
-                "type": "string"
-              },
-              "observacion": {
-                "type": "string"
-              },
-              "recursos": {
-                "type": "integer"
-              },
-              "estado": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -682,58 +545,13 @@
           }
         }
       },
-      "NewRegistro-actividad": {
+      "NewForma-pagos": {
         "required": [
-          "actividad",
-          "estado"
+          "nombre"
         ],
         "properties": {
-          "actividad": {
+          "nombre": {
             "type": "string"
-          },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
-            "type": "string"
-          },
-          "campo": {
-            "type": "string"
-          },
-          "registro_actividad": {
-            "type": "string"
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventas",
+  "info": {
+    "name": "Ventas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "producto": {
+      "model": "productos"
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "valorkilo": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "total": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "factura": {
+      "type": "string",
+      "required": true
+    },
+    "forma_pago": {
+      "model": "forma-pagos"
+    },
+    "cheque": {
+      "type": "string"
+    },
+    "campo": {
+      "model": "campo",
+      "via": "ventas"
+    },
+    "calidad": {
+      "type": "string",
+      "required": true
+    },
+    "cantidad": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

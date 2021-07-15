@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/registro-actividads": {
+    "/ventas": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the ventas's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ventas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ventas"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Ventas"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new ventas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ventas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ventas"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Ventas"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewVentas"
               }
             }
           }
         }
       }
     },
-    "/registro-actividads/count": {
+    "/ventas/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of ventas documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ventas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Ventas"
         ],
         "parameters": []
       }
     },
-    "/registro-actividads/{id}": {
+    "/ventas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one ventas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ventas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ventas"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Ventas"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single ventas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve ventas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ventas"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Ventas"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewVentas"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single ventas record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single ventas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Ventas"
         ],
         "parameters": [
           {
@@ -527,37 +514,79 @@
   },
   "components": {
     "schemas": {
-      "Registro-actividad": {
+      "Ventas": {
         "required": [
           "id",
-          "actividad",
-          "estado"
+          "precio",
+          "valorkilo",
+          "total",
+          "factura",
+          "calidad",
+          "cantidad"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "actividad": {
+          "producto": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "precio": {
+            "type": "number"
+          },
+          "valorkilo": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "factura": {
             "type": "string"
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
+          "forma_pago": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
-          },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
+          "cheque": {
             "type": "string"
           },
           "campo": {
@@ -595,86 +624,11 @@
               }
             }
           },
-          "registro_actividad": {
-            "required": [
-              "id",
-              "actividad",
-              "estado"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actividad": {
-                "type": "string"
-              },
-              "fechainicio": {
-                "type": "string"
-              },
-              "fechafin": {
-                "type": "string"
-              },
-              "proposito": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "cantidad": {
-                "type": "string"
-              },
-              "medida": {
-                "type": "string"
-              },
-              "campo": {
-                "type": "string"
-              },
-              "registro_actividad": {
-                "type": "string"
-              },
-              "fechainiciocliente": {
-                "type": "string"
-              },
-              "fechafincliente": {
-                "type": "string"
-              },
-              "observacion": {
-                "type": "string"
-              },
-              "recursos": {
-                "type": "integer"
-              },
-              "estado": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
+          "calidad": {
             "type": "string"
           },
-          "recursos": {
+          "cantidad": {
             "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -682,58 +636,45 @@
           }
         }
       },
-      "NewRegistro-actividad": {
+      "NewVentas": {
         "required": [
-          "actividad",
-          "estado"
+          "precio",
+          "valorkilo",
+          "total",
+          "factura",
+          "calidad",
+          "cantidad"
         ],
         "properties": {
-          "actividad": {
+          "producto": {
             "type": "string"
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
+          "precio": {
+            "type": "number"
           },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
+          "valorkilo": {
+            "type": "number"
           },
-          "proposito": {
+          "total": {
+            "type": "number"
+          },
+          "factura": {
             "type": "string"
           },
-          "tipo": {
+          "forma_pago": {
             "type": "string"
           },
-          "cantidad": {
-            "type": "string"
-          },
-          "medida": {
+          "cheque": {
             "type": "string"
           },
           "campo": {
             "type": "string"
           },
-          "registro_actividad": {
+          "calidad": {
             "type": "string"
           },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
+          "cantidad": {
             "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -749,5 +690,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Ventas"
+    }
+  ]
 }

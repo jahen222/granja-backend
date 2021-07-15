@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/forma-pagos",
+      "handler": "forma-pagos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/forma-pagos/count",
+      "handler": "forma-pagos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/forma-pagos/:id",
+      "handler": "forma-pagos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/forma-pagos",
+      "handler": "forma-pagos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/forma-pagos/:id",
+      "handler": "forma-pagos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/forma-pagos/:id",
+      "handler": "forma-pagos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

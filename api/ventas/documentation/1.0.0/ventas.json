@@ -517,7 +517,6 @@
       "Ventas": {
         "required": [
           "id",
-          "precio",
           "valorkilo",
           "total",
           "factura",
@@ -550,9 +549,6 @@
                 "type": "string"
               }
             }
-          },
-          "precio": {
-            "type": "number"
           },
           "valorkilo": {
             "type": "number"
@@ -613,6 +609,12 @@
                   "type": "string"
                 }
               },
+              "compras": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -638,7 +640,6 @@
       },
       "NewVentas": {
         "required": [
-          "precio",
           "valorkilo",
           "total",
           "factura",
@@ -648,9 +649,6 @@
         "properties": {
           "producto": {
             "type": "string"
-          },
-          "precio": {
-            "type": "number"
           },
           "valorkilo": {
             "type": "number"

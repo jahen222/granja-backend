@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "ventas",
+  "collectionName": "compras",
   "info": {
-    "name": "Ventas",
+    "name": "Compras",
     "description": ""
   },
   "options": {
@@ -15,7 +15,19 @@
     "producto": {
       "model": "productos"
     },
-    "valorkilo": {
+    "centrocosto": {
+      "model": "productos"
+    },
+    "cantidad": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "unidad": {
+      "type": "string",
+      "required": true
+    },
+    "valorunitario": {
       "type": "decimal",
       "required": true,
       "min": 0
@@ -25,9 +37,13 @@
       "required": true,
       "min": 0
     },
+    "guia": {
+      "type": "string",
+      "required": false
+    },
     "factura": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "forma_pago": {
       "model": "forma-pagos"
@@ -37,15 +53,7 @@
     },
     "campo": {
       "model": "campo",
-      "via": "ventas"
-    },
-    "calidad": {
-      "type": "string",
-      "required": true
-    },
-    "cantidad": {
-      "required": true,
-      "type": "integer"
+      "via": "compras"
     }
   }
 }

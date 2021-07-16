@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/registro-actividads": {
+    "/compras": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the compras's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve compras document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Compras"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Compras"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new compras record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve compras document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Compras"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Compras"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewCompras"
               }
             }
           }
         }
       }
     },
-    "/registro-actividads/count": {
+    "/compras/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of compras documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve compras document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Compras"
         ],
         "parameters": []
       }
     },
-    "/registro-actividads/{id}": {
+    "/compras/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one compras record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve compras document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Compras"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Compras"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single compras record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve compras document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Compras"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Compras"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRegistro-actividad"
+                "$ref": "#/components/schemas/NewCompras"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single compras record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single compras based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Registro-actividad"
+          "Compras"
         ],
         "parameters": [
           {
@@ -527,37 +514,106 @@
   },
   "components": {
     "schemas": {
-      "Registro-actividad": {
+      "Compras": {
         "required": [
           "id",
-          "actividad",
-          "estado"
+          "cantidad",
+          "unidad",
+          "valorunitario",
+          "total"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "actividad": {
-            "type": "string"
+          "producto": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
-            "type": "string"
+          "centrocosto": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "cantidad": {
+            "type": "integer"
+          },
+          "unidad": {
             "type": "string"
           },
-          "medida": {
+          "valorunitario": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "guia": {
+            "type": "string"
+          },
+          "factura": {
+            "type": "string"
+          },
+          "forma_pago": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "cheque": {
             "type": "string"
           },
           "campo": {
@@ -601,145 +657,52 @@
               }
             }
           },
-          "registro_actividad": {
-            "required": [
-              "id",
-              "actividad",
-              "estado"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "actividad": {
-                "type": "string"
-              },
-              "fechainicio": {
-                "type": "string"
-              },
-              "fechafin": {
-                "type": "string"
-              },
-              "proposito": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "cantidad": {
-                "type": "string"
-              },
-              "medida": {
-                "type": "string"
-              },
-              "campo": {
-                "type": "string"
-              },
-              "registro_actividad": {
-                "type": "string"
-              },
-              "fechainiciocliente": {
-                "type": "string"
-              },
-              "fechafincliente": {
-                "type": "string"
-              },
-              "observacion": {
-                "type": "string"
-              },
-              "recursos": {
-                "type": "integer"
-              },
-              "estado": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewRegistro-actividad": {
+      "NewCompras": {
         "required": [
-          "actividad",
-          "estado"
+          "cantidad",
+          "unidad",
+          "valorunitario",
+          "total"
         ],
         "properties": {
-          "actividad": {
+          "producto": {
             "type": "string"
           },
-          "fechainicio": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafin": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "proposito": {
-            "type": "string"
-          },
-          "tipo": {
+          "centrocosto": {
             "type": "string"
           },
           "cantidad": {
+            "type": "integer"
+          },
+          "unidad": {
             "type": "string"
           },
-          "medida": {
+          "valorunitario": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "guia": {
+            "type": "string"
+          },
+          "factura": {
+            "type": "string"
+          },
+          "forma_pago": {
+            "type": "string"
+          },
+          "cheque": {
             "type": "string"
           },
           "campo": {
             "type": "string"
-          },
-          "registro_actividad": {
-            "type": "string"
-          },
-          "fechainiciocliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "fechafincliente": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "observacion": {
-            "type": "string"
-          },
-          "recursos": {
-            "type": "integer"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Proyectado"
           },
           "published_at": {
             "type": "string",
@@ -755,5 +718,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Compras"
+    }
+  ]
 }

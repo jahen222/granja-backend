@@ -566,7 +566,6 @@
             "items": {
               "required": [
                 "id",
-                "precio",
                 "valorkilo",
                 "total",
                 "factura",
@@ -579,9 +578,6 @@
                 },
                 "producto": {
                   "type": "string"
-                },
-                "precio": {
-                  "type": "number"
                 },
                 "valorkilo": {
                   "type": "number"
@@ -619,6 +615,65 @@
               }
             }
           },
+          "compras": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "cantidad",
+                "unidad",
+                "valorunitario",
+                "total"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "producto": {
+                  "type": "string"
+                },
+                "centrocosto": {
+                  "type": "string"
+                },
+                "cantidad": {
+                  "type": "integer"
+                },
+                "unidad": {
+                  "type": "string"
+                },
+                "valorunitario": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "guia": {
+                  "type": "string"
+                },
+                "factura": {
+                  "type": "string"
+                },
+                "forma_pago": {
+                  "type": "string"
+                },
+                "cheque": {
+                  "type": "string"
+                },
+                "campo": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -640,6 +695,12 @@
             }
           },
           "ventas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "compras": {
             "type": "array",
             "items": {
               "type": "string"

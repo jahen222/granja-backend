@@ -24,6 +24,10 @@
     "ventas": {
       "via": "campo",
       "collection": "ventas"
+    },
+    "compras": {
+      "via": "campo",
+      "collection": "compras"
     }
   }
 }

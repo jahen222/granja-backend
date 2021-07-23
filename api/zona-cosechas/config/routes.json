@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zona-cosechas",
+      "handler": "zona-cosechas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zona-cosechas/count",
+      "handler": "zona-cosechas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zona-cosechas/:id",
+      "handler": "zona-cosechas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zona-cosechas",
+      "handler": "zona-cosechas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/zona-cosechas/:id",
+      "handler": "zona-cosechas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/zona-cosechas/:id",
+      "handler": "zona-cosechas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

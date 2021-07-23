@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/centro-costos",
+      "handler": "centro-costos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/centro-costos/count",
+      "handler": "centro-costos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/centro-costos/:id",
+      "handler": "centro-costos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/centro-costos",
+      "handler": "centro-costos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/centro-costos/:id",
+      "handler": "centro-costos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/centro-costos/:id",
+      "handler": "centro-costos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

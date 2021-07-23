@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "compras",
+  "collectionName": "cosechas",
   "info": {
-    "name": "Compras",
+    "name": "Cosechas",
     "description": ""
   },
   "options": {
@@ -12,8 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "producto": {
-      "model": "productos"
+    "producto_cosecha": {
+      "model": "producto-cosechas"
+    },
+    "zona_cosecha": {
+      "model": "zona-cosechas"
     },
     "cantidad": {
       "type": "integer",
@@ -24,36 +27,28 @@
       "type": "string",
       "required": true
     },
-    "valorunitario": {
+    "ha": {
       "type": "decimal",
       "required": true,
       "min": 0
     },
-    "total": {
+    "arboles": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "kilosxarbol": {
       "type": "decimal",
       "required": true,
       "min": 0
     },
-    "guia": {
-      "type": "string",
-      "required": false
-    },
-    "factura": {
-      "type": "string",
-      "required": false
-    },
-    "forma_pago": {
-      "model": "forma-pagos"
-    },
-    "cheque": {
-      "type": "string"
+    "kilosxhectarea": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
     },
     "campo": {
-      "model": "campo",
-      "via": "compras"
-    },
-    "centro_costo": {
-      "model": "centro-costos"
+      "model": "campo"
     }
   }
 }

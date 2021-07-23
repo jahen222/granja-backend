@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centro_costos",
+  "info": {
+    "name": "Centro Costos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

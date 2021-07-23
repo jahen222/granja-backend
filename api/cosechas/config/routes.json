@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cosechas",
+      "handler": "cosechas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cosechas/count",
+      "handler": "cosechas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cosechas/:id",
+      "handler": "cosechas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cosechas",
+      "handler": "cosechas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cosechas/:id",
+      "handler": "cosechas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cosechas/:id",
+      "handler": "cosechas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

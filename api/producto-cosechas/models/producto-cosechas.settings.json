@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "producto_cosechas",
+  "info": {
+    "name": "Producto Cosechas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "zona_cosechas": {
+      "via": "producto_cosecha",
+      "collection": "zona-cosechas"
+    }
+  }
+}

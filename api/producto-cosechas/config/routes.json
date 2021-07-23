@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/producto-cosechas",
+      "handler": "producto-cosechas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/producto-cosechas/count",
+      "handler": "producto-cosechas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/producto-cosechas/:id",
+      "handler": "producto-cosechas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/producto-cosechas",
+      "handler": "producto-cosechas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/producto-cosechas/:id",
+      "handler": "producto-cosechas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/producto-cosechas/:id",
+      "handler": "producto-cosechas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

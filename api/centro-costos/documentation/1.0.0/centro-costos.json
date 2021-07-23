@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/campos": {
+    "/centro-costos": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the centro-costos's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve centro-costos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Campo"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Centro-costos"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new centro-costos record",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campo"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Campo"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewCampo"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/campos/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve centro-costos document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Centro-costos"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCentro-costos"
+              }
+            }
+          }
+        }
       }
     },
-    "/campos/{id}": {
+    "/centro-costos/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of centro-costos documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve centro-costos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Campo"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Centro-costos"
+        ],
+        "parameters": []
+      }
+    },
+    "/centro-costos/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one centro-costos record",
+        "responses": {
+          "200": {
+            "description": "Retrieve centro-costos document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Centro-costos"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single centro-costos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve centro-costos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Campo"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Centro-costos"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCampo"
+                "$ref": "#/components/schemas/NewCentro-costos"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single centro-costos record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single centro-costos based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Centro-costos"
         ],
         "parameters": [
           {
@@ -514,10 +527,9 @@
   },
   "components": {
     "schemas": {
-      "Campo": {
+      "Centro-costos": {
         "required": [
-          "id",
-          "nombre"
+          "id"
         ],
         "properties": {
           "id": {
@@ -526,185 +538,16 @@
           "nombre": {
             "type": "string"
           },
-          "zonas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "numero"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "numero": {
-                  "type": "integer"
-                },
-                "campo": {
-                  "type": "string"
-                },
-                "camellones": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "ventas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "valorkilo",
-                "total",
-                "factura",
-                "calidad",
-                "cantidad"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "producto": {
-                  "type": "string"
-                },
-                "valorkilo": {
-                  "type": "number"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "factura": {
-                  "type": "string"
-                },
-                "forma_pago": {
-                  "type": "string"
-                },
-                "cheque": {
-                  "type": "string"
-                },
-                "campo": {
-                  "type": "string"
-                },
-                "calidad": {
-                  "type": "string"
-                },
-                "cantidad": {
-                  "type": "integer"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "compras": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "cantidad",
-                "unidad",
-                "valorunitario",
-                "total"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "producto": {
-                  "type": "string"
-                },
-                "cantidad": {
-                  "type": "integer"
-                },
-                "unidad": {
-                  "type": "string"
-                },
-                "valorunitario": {
-                  "type": "number"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "guia": {
-                  "type": "string"
-                },
-                "factura": {
-                  "type": "string"
-                },
-                "forma_pago": {
-                  "type": "string"
-                },
-                "cheque": {
-                  "type": "string"
-                },
-                "campo": {
-                  "type": "string"
-                },
-                "centro_costo": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewCampo": {
-        "required": [
-          "nombre"
-        ],
+      "NewCentro-costos": {
         "properties": {
           "nombre": {
             "type": "string"
-          },
-          "zonas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "ventas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "compras": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -720,9 +563,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Campo"
-    }
-  ]
+  "tags": []
 }

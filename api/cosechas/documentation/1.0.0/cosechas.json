@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/campos": {
+    "/cosechas": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the cosechas's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cosechas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Campo"
+                    "$ref": "#/components/schemas/Cosechas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Cosechas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new cosechas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cosechas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Campo"
+                  "$ref": "#/components/schemas/Cosechas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Cosechas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCampo"
+                "$ref": "#/components/schemas/NewCosechas"
               }
             }
           }
         }
       }
     },
-    "/campos/count": {
+    "/cosechas/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of cosechas documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cosechas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Cosechas"
         ],
         "parameters": []
       }
     },
-    "/campos/{id}": {
+    "/cosechas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one cosechas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cosechas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Campo"
+                  "$ref": "#/components/schemas/Cosechas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Cosechas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single cosechas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve cosechas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Campo"
+                  "$ref": "#/components/schemas/Cosechas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Cosechas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCampo"
+                "$ref": "#/components/schemas/NewCosechas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single cosechas record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single cosechas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Campo"
+          "Cosechas"
         ],
         "parameters": [
           {
@@ -514,163 +514,131 @@
   },
   "components": {
     "schemas": {
-      "Campo": {
+      "Cosechas": {
         "required": [
           "id",
-          "nombre"
+          "cantidad",
+          "unidad",
+          "ha",
+          "arboles",
+          "kilosxarbol",
+          "kilosxhectarea"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "nombre": {
+          "producto_cosecha": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "zona_cosechas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "zona_cosecha": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "producto_cosecha": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "cantidad": {
+            "type": "integer"
+          },
+          "unidad": {
             "type": "string"
           },
-          "zonas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "numero"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "numero": {
-                  "type": "integer"
-                },
-                "campo": {
-                  "type": "string"
-                },
-                "camellones": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "ha": {
+            "type": "number"
           },
-          "ventas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "valorkilo",
-                "total",
-                "factura",
-                "calidad",
-                "cantidad"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "producto": {
-                  "type": "string"
-                },
-                "valorkilo": {
-                  "type": "number"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "factura": {
-                  "type": "string"
-                },
-                "forma_pago": {
-                  "type": "string"
-                },
-                "cheque": {
-                  "type": "string"
-                },
-                "campo": {
-                  "type": "string"
-                },
-                "calidad": {
-                  "type": "string"
-                },
-                "cantidad": {
-                  "type": "integer"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "arboles": {
+            "type": "integer"
           },
-          "compras": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "cantidad",
-                "unidad",
-                "valorunitario",
-                "total"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "producto": {
-                  "type": "string"
-                },
-                "cantidad": {
-                  "type": "integer"
-                },
-                "unidad": {
-                  "type": "string"
-                },
-                "valorunitario": {
-                  "type": "number"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "guia": {
-                  "type": "string"
-                },
-                "factura": {
-                  "type": "string"
-                },
-                "forma_pago": {
-                  "type": "string"
-                },
-                "cheque": {
-                  "type": "string"
-                },
-                "campo": {
-                  "type": "string"
-                },
-                "centro_costo": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "kilosxarbol": {
+            "type": "number"
+          },
+          "kilosxhectarea": {
+            "type": "number"
+          },
+          "campo": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "zonas": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "ventas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "compras": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -680,31 +648,42 @@
           }
         }
       },
-      "NewCampo": {
+      "NewCosechas": {
         "required": [
-          "nombre"
+          "cantidad",
+          "unidad",
+          "ha",
+          "arboles",
+          "kilosxarbol",
+          "kilosxhectarea"
         ],
         "properties": {
-          "nombre": {
+          "producto_cosecha": {
             "type": "string"
           },
-          "zonas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "zona_cosecha": {
+            "type": "string"
           },
-          "ventas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "cantidad": {
+            "type": "integer"
           },
-          "compras": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "unidad": {
+            "type": "string"
+          },
+          "ha": {
+            "type": "number"
+          },
+          "arboles": {
+            "type": "integer"
+          },
+          "kilosxarbol": {
+            "type": "number"
+          },
+          "kilosxhectarea": {
+            "type": "number"
+          },
+          "campo": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -722,7 +701,7 @@
   },
   "tags": [
     {
-      "name": "Campo"
+      "name": "Cosechas"
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zona_cosechas",
+  "info": {
+    "name": "Zona Cosechas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "producto_cosecha": {
+      "model": "producto-cosechas",
+      "via": "zona_cosechas"
+    }
+  }
+}

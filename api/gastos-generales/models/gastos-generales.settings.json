@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gastos_generales",
+  "info": {
+    "name": "Gastos Generales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "proveedore": {
+      "model": "proveedores"
+    },
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "unidad": {
+      "type": "string",
+      "required": true
+    },
+    "cantidad": {
+      "type": "integer",
+      "required": true
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "total": {
+      "type": "decimal",
+      "required": true
+    },
+    "fecha": {
+      "type": "datetime",
+      "required": true
+    },
+    "documento": {
+      "type": "string",
+      "required": true
+    },
+    "tipo_documento": {
+      "type": "string",
+      "required": true
+    },
+    "campo": {
+      "model": "campo"
+    }
+  }
+}

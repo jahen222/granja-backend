@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gastos-generales",
+      "handler": "gastos-generales.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gastos-generales/count",
+      "handler": "gastos-generales.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gastos-generales/:id",
+      "handler": "gastos-generales.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gastos-generales",
+      "handler": "gastos-generales.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gastos-generales/:id",
+      "handler": "gastos-generales.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gastos-generales/:id",
+      "handler": "gastos-generales.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

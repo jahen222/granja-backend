@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "honorarios",
+  "info": {
+    "name": "Honorarios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profesionale": {
+      "model": "profesionales"
+    },
+    "descripcion": {
+      "type": "string",
+      "required": true
+    },
+    "boleta": {
+      "type": "string",
+      "required": true
+    },
+    "monto": {
+      "type": "decimal",
+      "required": true
+    },
+    "fecha": {
+      "type": "datetime",
+      "required": true
+    },
+    "campo": {
+      "model": "campo"
+    }
+  }
+}

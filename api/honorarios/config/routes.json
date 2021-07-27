@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/honorarios",
+      "handler": "honorarios.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/honorarios/count",
+      "handler": "honorarios.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/honorarios/:id",
+      "handler": "honorarios.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/honorarios",
+      "handler": "honorarios.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/honorarios/:id",
+      "handler": "honorarios.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/honorarios/:id",
+      "handler": "honorarios.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

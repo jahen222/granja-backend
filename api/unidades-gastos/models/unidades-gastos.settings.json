@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unidades_gastos",
+  "info": {
+    "name": "Unidades Gastos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

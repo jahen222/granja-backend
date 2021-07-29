@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/unidades-gastos",
+      "handler": "unidades-gastos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/unidades-gastos/count",
+      "handler": "unidades-gastos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/unidades-gastos/:id",
+      "handler": "unidades-gastos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/unidades-gastos",
+      "handler": "unidades-gastos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/unidades-gastos/:id",
+      "handler": "unidades-gastos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/unidades-gastos/:id",
+      "handler": "unidades-gastos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

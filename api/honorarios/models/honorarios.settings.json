@@ -21,7 +21,7 @@
     },
     "boleta": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "monto": {
       "type": "decimal",
@@ -33,6 +33,9 @@
     },
     "campo": {
       "model": "campo"
+    },
+    "tipo": {
+      "type": "string"
     }
   }
 }

@@ -632,6 +632,44 @@
           "cantidad": {
             "type": "integer"
           },
+          "cliente": {
+            "required": [
+              "id",
+              "nombre",
+              "rut",
+              "telefono",
+              "direccion"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "rut": {
+                "type": "string"
+              },
+              "telefono": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -673,6 +711,9 @@
           },
           "cantidad": {
             "type": "integer"
+          },
+          "cliente": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

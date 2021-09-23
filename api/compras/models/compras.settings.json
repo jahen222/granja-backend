@@ -54,6 +54,9 @@
     },
     "centro_costo": {
       "model": "centro-costos"
+    },
+    "proveedore": {
+      "model": "proveedores"
     }
   }
 }

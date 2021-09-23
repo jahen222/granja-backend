@@ -49,6 +49,10 @@
     },
     "campo": {
       "model": "campo"
+    },
+    "vin": {
+      "type": "float",
+      "required": true
     }
   }
 }

@@ -518,7 +518,6 @@
         "required": [
           "id",
           "descripcion",
-          "boleta",
           "monto",
           "fecha"
         ],
@@ -603,6 +602,9 @@
               }
             }
           },
+          "tipo": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -612,7 +614,6 @@
       "NewHonorarios": {
         "required": [
           "descripcion",
-          "boleta",
           "monto",
           "fecha"
         ],
@@ -634,6 +635,9 @@
             "format": "date-time"
           },
           "campo": {
+            "type": "string"
+          },
+          "tipo": {
             "type": "string"
           },
           "published_at": {

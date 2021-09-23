@@ -26,6 +26,10 @@
     "camellones": {
       "via": "zona",
       "collection": "camellones"
+    },
+    "cuidado_arboles": {
+      "via": "zona",
+      "collection": "cuidado-arboles"
     }
   }
 }

@@ -549,6 +549,12 @@
                     "type": "string"
                   }
                 },
+                "cuidado_arboles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -602,6 +608,9 @@
                 },
                 "cantidad": {
                   "type": "integer"
+                },
+                "cliente": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -660,6 +669,9 @@
                   "type": "string"
                 },
                 "centro_costo": {
+                  "type": "string"
+                },
+                "proveedore": {
                   "type": "string"
                 },
                 "published_at": {

@@ -537,11 +537,26 @@
           "id": {
             "type": "string"
           },
+          "actividad": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "estado": {
+            "type": "string",
+            "default": "Pendiente"
+          },
+          "camellone": {
+            "type": "string"
+          },
           "arbol": {
+            "type": "string"
+          },
+          "zona": {
             "required": [
               "id",
-              "numero",
-              "tipo"
+              "numero"
             ],
             "properties": {
               "id": {
@@ -550,16 +565,20 @@
               "numero": {
                 "type": "integer"
               },
-              "tipo": {
-                "type": "string",
-                "enum": [
-                  "Manzano",
-                  "Nogal",
-                  "Roble"
-                ]
-              },
-              "camellone": {
+              "campo": {
                 "type": "string"
+              },
+              "camellones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cuidado_arboles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -571,16 +590,6 @@
                 "type": "string"
               }
             }
-          },
-          "actividad": {
-            "type": "string"
-          },
-          "descripcion": {
-            "type": "string"
-          },
-          "estado": {
-            "type": "string",
-            "default": "Pendiente"
           },
           "published_at": {
             "type": "string",
@@ -594,9 +603,6 @@
           "estado"
         ],
         "properties": {
-          "arbol": {
-            "type": "string"
-          },
           "actividad": {
             "type": "string"
           },
@@ -606,6 +612,15 @@
           "estado": {
             "type": "string",
             "default": "Pendiente"
+          },
+          "camellone": {
+            "type": "string"
+          },
+          "arbol": {
+            "type": "string"
+          },
+          "zona": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

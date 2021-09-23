@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "proveedores",
+  "collectionName": "clientes",
   "info": {
-    "name": "Proveedores",
-    "description": ""
+    "name": "Clientes"
   },
   "options": {
     "increments": true,
@@ -16,19 +15,19 @@
       "type": "string",
       "required": true
     },
-    "email": {
-      "type": "email"
-    },
-    "direccion": {
-      "type": "text",
+    "rut": {
+      "type": "string",
       "required": true
     },
     "telefono": {
       "type": "string",
       "required": true
     },
-    "rut": {
-      "type": "string",
+    "email": {
+      "type": "email"
+    },
+    "direccion": {
+      "type": "text",
       "required": true
     }
   }

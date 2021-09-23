@@ -517,13 +517,28 @@
       "Proveedores": {
         "required": [
           "id",
-          "nombre"
+          "nombre",
+          "direccion",
+          "telefono",
+          "rut"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "nombre": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "rut": {
             "type": "string"
           },
           "published_at": {
@@ -534,10 +549,25 @@
       },
       "NewProveedores": {
         "required": [
-          "nombre"
+          "nombre",
+          "direccion",
+          "telefono",
+          "rut"
         ],
         "properties": {
           "nombre": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "rut": {
             "type": "string"
           },
           "published_at": {

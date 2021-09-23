@@ -603,6 +603,48 @@
               }
             }
           },
+          "cuidado_arboles": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "actividad",
+                "estado"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "actividad": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "estado": {
+                  "type": "string"
+                },
+                "camellone": {
+                  "type": "string"
+                },
+                "arbol": {
+                  "type": "string"
+                },
+                "zona": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -622,6 +664,12 @@
             "type": "string"
           },
           "camellones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cuidado_arboles": {
             "type": "array",
             "items": {
               "type": "string"

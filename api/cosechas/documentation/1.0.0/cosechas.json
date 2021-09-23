@@ -522,7 +522,8 @@
           "ha",
           "arboles",
           "kilosxarbol",
-          "kilosxhectarea"
+          "kilosxhectarea",
+          "vin"
         ],
         "properties": {
           "id": {
@@ -642,6 +643,9 @@
               }
             }
           },
+          "vin": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -655,7 +659,8 @@
           "ha",
           "arboles",
           "kilosxarbol",
-          "kilosxhectarea"
+          "kilosxhectarea",
+          "vin"
         ],
         "properties": {
           "producto_cosecha": {
@@ -684,6 +689,9 @@
           },
           "campo": {
             "type": "string"
+          },
+          "vin": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",

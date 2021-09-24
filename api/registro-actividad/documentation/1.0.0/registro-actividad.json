@@ -653,6 +653,9 @@
               "estado": {
                 "type": "string"
               },
+              "observacionfinal": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -681,6 +684,9 @@
           "estado": {
             "type": "string",
             "default": "Proyectado"
+          },
+          "observacionfinal": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -740,6 +746,9 @@
           "estado": {
             "type": "string",
             "default": "Proyectado"
+          },
+          "observacionfinal": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

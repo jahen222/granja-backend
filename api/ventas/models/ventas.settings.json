@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "producto": {
-      "model": "productos"
-    },
     "valorkilo": {
       "type": "decimal",
       "required": true,
@@ -49,6 +46,9 @@
     },
     "cliente": {
       "model": "clientes"
+    },
+    "producto_cosecha": {
+      "model": "producto-cosechas"
     }
   }
 }

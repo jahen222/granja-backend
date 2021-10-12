@@ -527,29 +527,6 @@
           "id": {
             "type": "string"
           },
-          "producto": {
-            "required": [
-              "id",
-              "nombre"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "valorkilo": {
             "type": "number"
           },
@@ -670,6 +647,35 @@
               }
             }
           },
+          "producto_cosecha": {
+            "required": [
+              "id",
+              "nombre"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "zona_cosechas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -685,9 +691,6 @@
           "cantidad"
         ],
         "properties": {
-          "producto": {
-            "type": "string"
-          },
           "valorkilo": {
             "type": "number"
           },
@@ -713,6 +716,9 @@
             "type": "integer"
           },
           "cliente": {
+            "type": "string"
+          },
+          "producto_cosecha": {
             "type": "string"
           },
           "published_at": {

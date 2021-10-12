@@ -52,7 +52,7 @@
     },
     "vin": {
       "type": "float",
-      "required": true
+      "required": false
     }
   }
 }

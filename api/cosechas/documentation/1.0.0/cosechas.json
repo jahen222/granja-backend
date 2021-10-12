@@ -522,8 +522,7 @@
           "ha",
           "arboles",
           "kilosxarbol",
-          "kilosxhectarea",
-          "vin"
+          "kilosxhectarea"
         ],
         "properties": {
           "id": {
@@ -659,8 +658,7 @@
           "ha",
           "arboles",
           "kilosxarbol",
-          "kilosxhectarea",
-          "vin"
+          "kilosxhectarea"
         ],
         "properties": {
           "producto_cosecha": {

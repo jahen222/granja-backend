@@ -582,9 +582,6 @@
                 "id": {
                   "type": "string"
                 },
-                "producto": {
-                  "type": "string"
-                },
                 "valorkilo": {
                   "type": "number"
                 },
@@ -610,6 +607,9 @@
                   "type": "integer"
                 },
                 "cliente": {
+                  "type": "string"
+                },
+                "producto_cosecha": {
                   "type": "string"
                 },
                 "published_at": {

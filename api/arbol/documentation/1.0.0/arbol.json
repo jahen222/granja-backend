@@ -517,15 +517,12 @@
       "Arbol": {
         "required": [
           "id",
-          "numero",
-          "tipo"
+          "tipo",
+          "numero"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "numero": {
-            "type": "integer"
           },
           "tipo": {
             "type": "string",
@@ -544,10 +541,10 @@
               "id": {
                 "type": "string"
               },
-              "numero": {
-                "type": "integer"
-              },
               "zona": {
+                "type": "string"
+              },
+              "numero": {
                 "type": "string"
               },
               "arboles": {
@@ -567,6 +564,9 @@
               }
             }
           },
+          "numero": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -575,13 +575,10 @@
       },
       "NewArbol": {
         "required": [
-          "numero",
-          "tipo"
+          "tipo",
+          "numero"
         ],
         "properties": {
-          "numero": {
-            "type": "integer"
-          },
           "tipo": {
             "type": "string",
             "enum": [
@@ -591,6 +588,9 @@
             ]
           },
           "camellone": {
+            "type": "string"
+          },
+          "numero": {
             "type": "string"
           },
           "published_at": {

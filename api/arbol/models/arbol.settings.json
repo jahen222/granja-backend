@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "numero": {
-      "type": "integer",
-      "required": true,
-      "unique": false,
-      "min": 0
-    },
     "tipo": {
       "type": "enumeration",
       "enum": [
@@ -30,6 +24,10 @@
     "camellone": {
       "via": "arboles",
       "model": "camellones"
+    },
+    "numero": {
+      "type": "string",
+      "required": true
     }
   }
 }

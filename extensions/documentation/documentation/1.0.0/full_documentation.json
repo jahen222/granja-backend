@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/05/2021 11:02:20 PM"
+    "x-generation-date": "10/13/2021 11:29:13 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13146,15 +13146,12 @@
       "Arbol": {
         "required": [
           "id",
-          "numero",
-          "tipo"
+          "tipo",
+          "numero"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "numero": {
-            "type": "integer"
           },
           "tipo": {
             "type": "string",
@@ -13173,10 +13170,10 @@
               "id": {
                 "type": "string"
               },
-              "numero": {
-                "type": "integer"
-              },
               "zona": {
+                "type": "string"
+              },
+              "numero": {
                 "type": "string"
               },
               "arboles": {
@@ -13196,6 +13193,9 @@
               }
             }
           },
+          "numero": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -13204,13 +13204,10 @@
       },
       "NewArbol": {
         "required": [
-          "numero",
-          "tipo"
+          "tipo",
+          "numero"
         ],
         "properties": {
-          "numero": {
-            "type": "integer"
-          },
           "tipo": {
             "type": "string",
             "enum": [
@@ -13220,6 +13217,9 @@
             ]
           },
           "camellone": {
+            "type": "string"
+          },
+          "numero": {
             "type": "string"
           },
           "published_at": {
@@ -13243,9 +13243,6 @@
           "id": {
             "type": "string"
           },
-          "numero": {
-            "type": "integer"
-          },
           "zona": {
             "required": [
               "id",
@@ -13254,9 +13251,6 @@
             "properties": {
               "id": {
                 "type": "string"
-              },
-              "numero": {
-                "type": "integer"
               },
               "campo": {
                 "type": "string"
@@ -13267,11 +13261,8 @@
                   "type": "string"
                 }
               },
-              "cuidado_arboles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "numero": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -13284,20 +13275,20 @@
               }
             }
           },
+          "numero": {
+            "type": "string"
+          },
           "arboles": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "numero",
-                "tipo"
+                "tipo",
+                "numero"
               ],
               "properties": {
                 "id": {
                   "type": "string"
-                },
-                "numero": {
-                  "type": "integer"
                 },
                 "tipo": {
                   "type": "string",
@@ -13308,6 +13299,9 @@
                   ]
                 },
                 "camellone": {
+                  "type": "string"
+                },
+                "numero": {
                   "type": "string"
                 },
                 "published_at": {
@@ -13333,10 +13327,10 @@
           "numero"
         ],
         "properties": {
-          "numero": {
-            "type": "integer"
-          },
           "zona": {
+            "type": "string"
+          },
+          "numero": {
             "type": "string"
           },
           "arboles": {
@@ -13380,9 +13374,6 @@
                 "id": {
                   "type": "string"
                 },
-                "numero": {
-                  "type": "integer"
-                },
                 "campo": {
                   "type": "string"
                 },
@@ -13392,11 +13383,8 @@
                     "type": "string"
                   }
                 },
-                "cuidado_arboles": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "numero": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -14126,12 +14114,6 @@
             "type": "string",
             "default": "Pendiente"
           },
-          "camellone": {
-            "type": "string"
-          },
-          "arbol": {
-            "type": "string"
-          },
           "zona": {
             "required": [
               "id",
@@ -14140,9 +14122,6 @@
             "properties": {
               "id": {
                 "type": "string"
-              },
-              "numero": {
-                "type": "integer"
               },
               "campo": {
                 "type": "string"
@@ -14153,11 +14132,75 @@
                   "type": "string"
                 }
               },
-              "cuidado_arboles": {
+              "numero": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "camellone": {
+            "required": [
+              "id",
+              "numero"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "zona": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "string"
+              },
+              "arboles": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "arbole": {
+            "required": [
+              "id",
+              "tipo",
+              "numero"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "tipo": {
+                "type": "string",
+                "enum": [
+                  "Manzano",
+                  "Nogal",
+                  "Roble"
+                ]
+              },
+              "camellone": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -14192,13 +14235,13 @@
             "type": "string",
             "default": "Pendiente"
           },
+          "zona": {
+            "type": "string"
+          },
           "camellone": {
             "type": "string"
           },
-          "arbol": {
-            "type": "string"
-          },
-          "zona": {
+          "arbole": {
             "type": "string"
           },
           "published_at": {
@@ -15358,10 +15401,6 @@
           "id": {
             "type": "string"
           },
-          "numero": {
-            "type": "integer",
-            "default": 1
-          },
           "campo": {
             "required": [
               "id",
@@ -15414,10 +15453,10 @@
                 "id": {
                   "type": "string"
                 },
-                "numero": {
-                  "type": "integer"
-                },
                 "zona": {
+                  "type": "string"
+                },
+                "numero": {
                   "type": "string"
                 },
                 "arboles": {
@@ -15438,47 +15477,8 @@
               }
             }
           },
-          "cuidado_arboles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "actividad",
-                "estado"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "actividad": {
-                  "type": "string"
-                },
-                "descripcion": {
-                  "type": "string"
-                },
-                "estado": {
-                  "type": "string"
-                },
-                "camellone": {
-                  "type": "string"
-                },
-                "arbol": {
-                  "type": "string"
-                },
-                "zona": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "numero": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -15491,10 +15491,6 @@
           "numero"
         ],
         "properties": {
-          "numero": {
-            "type": "integer",
-            "default": 1
-          },
           "campo": {
             "type": "string"
           },
@@ -15504,11 +15500,8 @@
               "type": "string"
             }
           },
-          "cuidado_arboles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "numero": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

@@ -537,9 +537,6 @@
                 "id": {
                   "type": "string"
                 },
-                "numero": {
-                  "type": "integer"
-                },
                 "campo": {
                   "type": "string"
                 },
@@ -549,11 +546,8 @@
                     "type": "string"
                   }
                 },
-                "cuidado_arboles": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "numero": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"

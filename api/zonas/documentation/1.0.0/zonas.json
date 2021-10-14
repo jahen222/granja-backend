@@ -523,10 +523,6 @@
           "id": {
             "type": "string"
           },
-          "numero": {
-            "type": "integer",
-            "default": 1
-          },
           "campo": {
             "required": [
               "id",
@@ -579,10 +575,10 @@
                 "id": {
                   "type": "string"
                 },
-                "numero": {
-                  "type": "integer"
-                },
                 "zona": {
+                  "type": "string"
+                },
+                "numero": {
                   "type": "string"
                 },
                 "arboles": {
@@ -603,47 +599,8 @@
               }
             }
           },
-          "cuidado_arboles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "actividad",
-                "estado"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "actividad": {
-                  "type": "string"
-                },
-                "descripcion": {
-                  "type": "string"
-                },
-                "estado": {
-                  "type": "string"
-                },
-                "camellone": {
-                  "type": "string"
-                },
-                "arbol": {
-                  "type": "string"
-                },
-                "zona": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "numero": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -656,10 +613,6 @@
           "numero"
         ],
         "properties": {
-          "numero": {
-            "type": "integer",
-            "default": 1
-          },
           "campo": {
             "type": "string"
           },
@@ -669,11 +622,8 @@
               "type": "string"
             }
           },
-          "cuidado_arboles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "numero": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

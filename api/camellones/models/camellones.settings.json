@@ -12,15 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "numero": {
-      "type": "integer",
-      "required": true,
-      "unique": false,
-      "min": 0
-    },
     "zona": {
       "via": "camellones",
       "model": "zonas"
+    },
+    "numero": {
+      "type": "string",
+      "required": true
     },
     "arboles": {
       "via": "camellone",

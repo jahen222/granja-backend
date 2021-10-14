@@ -523,9 +523,6 @@
           "id": {
             "type": "string"
           },
-          "numero": {
-            "type": "integer"
-          },
           "zona": {
             "required": [
               "id",
@@ -534,9 +531,6 @@
             "properties": {
               "id": {
                 "type": "string"
-              },
-              "numero": {
-                "type": "integer"
               },
               "campo": {
                 "type": "string"
@@ -547,11 +541,8 @@
                   "type": "string"
                 }
               },
-              "cuidado_arboles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "numero": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -564,20 +555,20 @@
               }
             }
           },
+          "numero": {
+            "type": "string"
+          },
           "arboles": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "numero",
-                "tipo"
+                "tipo",
+                "numero"
               ],
               "properties": {
                 "id": {
                   "type": "string"
-                },
-                "numero": {
-                  "type": "integer"
                 },
                 "tipo": {
                   "type": "string",
@@ -588,6 +579,9 @@
                   ]
                 },
                 "camellone": {
+                  "type": "string"
+                },
+                "numero": {
                   "type": "string"
                 },
                 "published_at": {
@@ -613,10 +607,10 @@
           "numero"
         ],
         "properties": {
-          "numero": {
-            "type": "integer"
-          },
           "zona": {
+            "type": "string"
+          },
+          "numero": {
             "type": "string"
           },
           "arboles": {

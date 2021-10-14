@@ -547,12 +547,6 @@
             "type": "string",
             "default": "Pendiente"
           },
-          "camellone": {
-            "type": "string"
-          },
-          "arbol": {
-            "type": "string"
-          },
           "zona": {
             "required": [
               "id",
@@ -561,9 +555,6 @@
             "properties": {
               "id": {
                 "type": "string"
-              },
-              "numero": {
-                "type": "integer"
               },
               "campo": {
                 "type": "string"
@@ -574,11 +565,75 @@
                   "type": "string"
                 }
               },
-              "cuidado_arboles": {
+              "numero": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "camellone": {
+            "required": [
+              "id",
+              "numero"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "zona": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "string"
+              },
+              "arboles": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "arbole": {
+            "required": [
+              "id",
+              "tipo",
+              "numero"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "tipo": {
+                "type": "string",
+                "enum": [
+                  "Manzano",
+                  "Nogal",
+                  "Roble"
+                ]
+              },
+              "camellone": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -613,13 +668,13 @@
             "type": "string",
             "default": "Pendiente"
           },
+          "zona": {
+            "type": "string"
+          },
           "camellone": {
             "type": "string"
           },
-          "arbol": {
-            "type": "string"
-          },
-          "zona": {
+          "arbole": {
             "type": "string"
           },
           "published_at": {

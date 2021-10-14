@@ -24,15 +24,14 @@
       "required": true,
       "default": "Pendiente"
     },
-    "camellone": {
-      "type": "string"
-    },
-    "arbol": {
-      "type": "string"
-    },
     "zona": {
-      "model": "zonas",
-      "via": "cuidado_arboles"
+      "model": "zonas"
+    },
+    "camellone": {
+      "model": "camellones"
+    },
+    "arbole": {
+      "model": "arbol"
     }
   }
 }

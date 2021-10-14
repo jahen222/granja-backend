@@ -12,13 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "numero": {
-      "required": true,
-      "unique": false,
-      "min": 0,
-      "default": 1,
-      "type": "integer"
-    },
     "campo": {
       "model": "campo",
       "via": "zonas"
@@ -27,9 +20,9 @@
       "via": "zona",
       "collection": "camellones"
     },
-    "cuidado_arboles": {
-      "via": "zona",
-      "collection": "cuidado-arboles"
+    "numero": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -570,7 +570,8 @@
                 "total",
                 "factura",
                 "calidad",
-                "cantidad"
+                "cantidad",
+                "producto"
               ],
               "properties": {
                 "id": {
@@ -603,7 +604,7 @@
                 "cliente": {
                   "type": "string"
                 },
-                "producto_cosecha": {
+                "producto": {
                   "type": "string"
                 },
                 "published_at": {

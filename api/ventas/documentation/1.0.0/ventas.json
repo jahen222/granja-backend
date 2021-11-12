@@ -521,7 +521,8 @@
           "total",
           "factura",
           "calidad",
-          "cantidad"
+          "cantidad",
+          "producto"
         ],
         "properties": {
           "id": {
@@ -647,34 +648,8 @@
               }
             }
           },
-          "producto_cosecha": {
-            "required": [
-              "id",
-              "nombre"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "zona_cosechas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "producto": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -688,7 +663,8 @@
           "total",
           "factura",
           "calidad",
-          "cantidad"
+          "cantidad",
+          "producto"
         ],
         "properties": {
           "valorkilo": {
@@ -718,7 +694,7 @@
           "cliente": {
             "type": "string"
           },
-          "producto_cosecha": {
+          "producto": {
             "type": "string"
           },
           "published_at": {

@@ -520,7 +520,6 @@
           "cantidad",
           "unidad",
           "ha",
-          "arboles",
           "kilosxarbol",
           "kilosxhectarea"
         ],
@@ -656,7 +655,6 @@
           "cantidad",
           "unidad",
           "ha",
-          "arboles",
           "kilosxarbol",
           "kilosxhectarea"
         ],

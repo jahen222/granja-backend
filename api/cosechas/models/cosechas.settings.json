@@ -34,8 +34,7 @@
     },
     "arboles": {
       "type": "integer",
-      "required": true,
-      "min": 0
+      "required": false
     },
     "kilosxarbol": {
       "type": "decimal",

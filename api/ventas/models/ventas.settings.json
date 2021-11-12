@@ -47,8 +47,9 @@
     "cliente": {
       "model": "clientes"
     },
-    "producto_cosecha": {
-      "model": "producto-cosechas"
+    "producto": {
+      "type": "string",
+      "required": true
     }
   }
 }

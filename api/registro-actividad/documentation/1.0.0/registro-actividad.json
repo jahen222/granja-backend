@@ -656,6 +656,9 @@
               "observacionfinal": {
                 "type": "string"
               },
+              "compra": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -686,6 +689,9 @@
             "default": "Proyectado"
           },
           "observacionfinal": {
+            "type": "string"
+          },
+          "compra": {
             "type": "string"
           },
           "published_at": {
@@ -748,6 +754,9 @@
             "default": "Proyectado"
           },
           "observacionfinal": {
+            "type": "string"
+          },
+          "compra": {
             "type": "string"
           },
           "published_at": {

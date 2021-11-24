@@ -59,6 +59,9 @@
     },
     "observacionfinal": {
       "type": "string"
+    },
+    "compra": {
+      "type": "string"
     }
   }
 }
